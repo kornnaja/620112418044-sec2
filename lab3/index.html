@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+        .red {
+            color: red;
+        }
+ </style>
+     
+</head>
+
+<body>
+    <div id="div"> Hello !</div>
+    <button id="btn1" class="btn btn-success">Click Me !</button>
+    <div>
+        <input type="text" class="in1">
+        <input type="text" class="in1">
+        <input type="text" class="in1">
+    </div>
+    <div>
+        <button id="btn2">Save</button>
+        <button id="btn3">COLOR</button>
+           
+    </div>
+    <div id="div_form">
+
+    </div>
+</body>
+<script>
+    var num = 10;
+    let name = "korn";
+    const no = 10.45;
+    let arr = [10, 20, "hi"];
+    const obj = { name: "korn", age: 25 };
+    const objMix = { 
+        data: [
+            { name: "na", gpa: 4.00 }, 
+            { name: "kan", age: 10, gpa: 3.22 }
+            ] 
+            };
+        console.log(name);
+        console.log(arr[1]);
+        console.log(objMix.data[1].name);
+        document.getElementById("div").innerHTML=name;
+
+        function add(a,b){
+                return a + b;
+        }
+        console.log(add(3, 5));
+
+
+
+        $(function (){
+            //alert("hello jquery!");
+            $("#div").text(num);
+
+            $("#btn2").click(function (){
+                 $(".in1").val("test");
+            });
+            
+            $("#btn3").bind("click",()=>{
+                $(".in1:even").addClass("red");
+            });
+
+            $("#div_form").load("./pages/form.html");
+        
+        });
+
+        
+
+
+
+        </script>
+
+</html>
