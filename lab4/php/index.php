@@ -1,17 +1,12 @@
-<?php
-#phpinfo();
-
-
+<?php 
+echo "test";
 $num = 10;
-$name = "kkkk";
-
-echo "GET :" . $_GET['name'];
-echo "POST :" . $_POST['pass'];
-
-
+$name = "test";
+echo $_GET['user'];
+echo $_POST['password'];
 ?>
 
-<table border="1">
+<table>
     <thead>
         <tr>
             <th>#</th>
@@ -20,24 +15,14 @@ echo "POST :" . $_POST['pass'];
     </thead>
     <tbody>
         <tr>
-            <td>
-                1
-            </td>
-            <td>
-                <?php echo $name ?>
-            </td>
+            <td>1</td>
+            <td><?php echo $name ?></td>
         </tr>
-        <?php
-        for ($i = 2; $i < 5; $i++) {
-        ?>
-            <tr>
-                <td>
-                    <?php echo $i  ?>
-                </td>
-                <td>
-                    <? echo $name ?>
-                </td>
-            </tr>
-        <?php  } ?>
+        <?php for($i = 2; $i < 5; $i++){ ?>
+        <tr>
+            <td><?= $i ?></td>
+            <td><?= $name ?></td>
+        </tr>
+        <?php } ?>
     </tbody>
 </table>
